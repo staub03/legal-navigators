@@ -4,10 +4,15 @@ import { Button } from 'flowbite-react';
 import { Transition } from '@headlessui/react'
 import { Dialog } from '@headlessui/react'
 
-
+const navigation = [
+  { name: 'Home', href: '#' },
+  { name: 'FAQ', href: '#' },
+  { name: 'About Us', href: '#' },
+]
 
 export default function LandingPage() {
   let [warningOpen, setWarningOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   var languageEn = true;
 
   return (
@@ -104,12 +109,9 @@ export default function LandingPage() {
               You don't know? We got you covered!
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button onClick={() => setWarningOpen(true)} type="button" class="text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
-                Get started
+              <Button onClick={() => setWarningOpen(true)} type="button" class="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2">
+                Find the right court for your case
               </Button>
-              <a href="faq" className="font-akkurat text-legalnavdarkpurple text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true"> →</span>
-              </a>
             </div>
           </div>
         </div>
@@ -119,7 +121,7 @@ export default function LandingPage() {
 <div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-transparent">
     <div class="grid h-full max-w-lg grid-cols-3 mx-auto font-medium">
         <a target="_blank" href="#" type="button" class="inline-flex flex-col items-center justify-center px-5">
-            <svg class="w-6/12 mb-1 text-legalnavpurple hover:text-legalnavverydarkpurple fill-current duration-300" viewBox="0 0 1200 624" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <svg class="w-5/12 mb-1 text-legalnavpurple hover:text-legalnavverydarkpurple fill-current duration-300" viewBox="0 0 1200 624" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M0 57.5V115h115v509h115V115h116v509h361V115h132v509h114V115h133v509h114V0H592v511l-65.7-.2-65.8-.3-.3-255.3L460 0H0v57.5z"/>
                 </svg>
         </a>
