@@ -1,0 +1,22 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    colors: {
+      'legalnavverydarkpurple': '#273469',
+      'legalnavdarkpurple': '#4f5790',
+      'legalnavpurple': '#777dba',
+      'legalnavlightpurple': '#a0a5e5',
+      'legalnavverylightpurple': '#cbceff'
+    },
+
+    fontFamily: {
+      'akkurat': ['Akkurat Pro']
+  },
+    extend: {
+  plugins: [],
+}
+}
+}
