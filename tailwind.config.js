@@ -9,7 +9,8 @@ module.exports = {
       'legalnavdarkpurple': '#4f5790',
       'legalnavpurple': '#777dba',
       'legalnavlightpurple': '#a0a5e5',
-      'legalnavverylightpurple': '#cbceff'
+      'legalnavverylightpurple': '#cbceff',
+      current: 'currentColor',
     },
 
     fontFamily: {
@@ -17,6 +18,6 @@ module.exports = {
   },
     extend: {
   plugins: [],
-}
+},
 }
 }
