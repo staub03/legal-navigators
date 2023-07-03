@@ -1,6 +1,6 @@
 import Footer from '../components/footer';
 import Header from '../components/header';
-import Background from '../components/backgound';
+import Background from '../components/background';
 import AboutUs from '../components/aboutUsContent';
 
   

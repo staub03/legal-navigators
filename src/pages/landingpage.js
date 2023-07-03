@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import LandingPageContent from '../components/landingPageContent';
-import Background from '../components/backgound';
+import Background from '../components/background';
 
 export default function LandingPage() {
   let [warningOpen, setWarningOpen] = useState(false)
