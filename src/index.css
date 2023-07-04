@@ -100,3 +100,19 @@ code {
   transform-origin: -10vw 18vh;
   box-shadow: -14vmin 0 2.2188689582212557vmin currentColor;
 }
+
+.case-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 30px;
+  align-items: center;
+  width: 100%;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
