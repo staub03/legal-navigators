@@ -4,12 +4,17 @@ import Typewriter from 'typewriter-effect';
 import { Button, Progress } from 'flowbite-react';
 import { Transition } from '@headlessui/react';
 import { Dialog } from '@headlessui/react';
+import { HiOutlineArrowLeft, HiOutlineArrowRight, HiShoppingCart } from 'react-icons/hi';
 
 export default function FormPageContent() {
 
     const [selectedLawCase, setSelectedLawCase] = useState('');
     const navigate = useNavigate();
     const [warningOpen, setWarningOpen] = useState(false);
+
+    function handleBackClick() {
+        navigate('/')
+    }
 
     function handleClick(lawCase) {
         setWarningOpen(true);
@@ -38,6 +43,14 @@ export default function FormPageContent() {
                         >
                             Family Law
                         </Button>
+                    </div>
+                    <div className='back-button'>
+                    <Button onClick={handleBackClick} className='hover:-translate hover:scale-110 duration-300'>
+                        <HiOutlineArrowLeft className="ml-2 h-5 w-5" />
+                        <p>
+                            Back
+                        </p>                        
+                    </Button>
                     </div>
                 </h1>
             </div>

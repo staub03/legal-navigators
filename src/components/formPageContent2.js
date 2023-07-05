@@ -4,15 +4,20 @@ import Typewriter from 'typewriter-effect';
 import { Button, Progress } from 'flowbite-react';
 import { Transition } from '@headlessui/react';
 import { Dialog } from '@headlessui/react';
+import { HiOutlineArrowLeft, HiOutlineArrowRight, HiShoppingCart } from 'react-icons/hi';
 
 export default function FormPageContent2() {
+
+    function handleBackClick() {
+        navigate('/formpage')
+    }
 
     const navigate = useNavigate();
     const [warningOpen, setWarningOpen] = useState(false);
 
     function handleClick() {
         setWarningOpen(true);
-        navigate('/formpage2');
+        navigate('/PostalCodePage');
     }
     return (
         <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -22,6 +27,7 @@ export default function FormPageContent2() {
                     <div className='case-selection'>
                         <Progress progress={20} />
                         <Button
+                            onClick={() => handleClick()}
                             type="button"
                             className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
@@ -34,7 +40,13 @@ export default function FormPageContent2() {
                             NO
                         </Button>
                     </div>
-                    <div className='next'>
+                    <div className='back-button'>
+                    <Button onClick={handleBackClick}>
+                        <HiOutlineArrowLeft className="ml-2 h-5 w-5" />
+                        <p>
+                            Back
+                        </p>                        
+                    </Button>
                     </div>
                 </h1>
             </div>
