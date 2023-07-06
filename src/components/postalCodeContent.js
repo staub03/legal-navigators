@@ -16,11 +16,15 @@ export default function PostalCodeContent() {
         navigate('/formpage2')
     }
 
+    function handleNextClick() {
+        navigate('/CourtRecommendation')
+    }
+
     return (
         <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
                 <h1 className="font-akkurat text-legalnavverydarkpurple text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    Please enter the postal code of the counter party:
+                    Please enter the postal code of the accused party:
                     <div className='case-selection'>
                         <div>
                             <div className="relative mt-2 rounded-md shadow-sm">
@@ -40,6 +44,12 @@ export default function PostalCodeContent() {
                             <p>
                                 Back
                             </p>                        
+                        </Button>
+                        <Button onClick={handleNextClick}>
+                            <p>
+                                Next
+                            </p>
+                            <HiOutlineArrowRight className="ml-2 h-5 w-5" />                        
                         </Button>
                     </div>
                 </h1>

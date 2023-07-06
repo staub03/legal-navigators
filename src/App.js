@@ -5,6 +5,7 @@ import FaqPage from "./pages/faq"
 import Formpage from "./pages/formpage"
 import Formpage2 from "./pages/formpage2"
 import PostalCodePage from "./pages/postalCodePage"
+import CourtRecommendation from "./pages/courtRecommendation"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/formpage" element={ <Formpage/> } />
         <Route path="/formpage2" element={ <Formpage2/> } />
         <Route path="/PostalCodePage" element={ <PostalCodePage/> } />
+        <Route path="/CourtRecommendation" element={ <CourtRecommendation/> } />
       </Routes>
     </div>
   )
