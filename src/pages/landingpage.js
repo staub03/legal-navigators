@@ -8,11 +8,12 @@ import FormPageContent from '../components/formPageContent';
 
 export default function LandingPage() {
   const [isSteps, setIsSteps] = useState(0)
+  const request = [];
 
 return (
   <div class="flex flex-col h-screen">
 
-    <Header isSteps={isSteps} setIsSteps={setIsSteps} />
+    <Header/>
     <Background/>
     <Transition
                     show={isSteps===0}
@@ -34,7 +35,7 @@ return (
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-      <FormPageContent isSteps={isSteps} setIsSteps={setIsSteps} />
+      <FormPageContent isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
     </Transition>
     <Footer/>
   </div>

@@ -8,7 +8,7 @@ const navigation = [
     { name: 'About Us', href: 'about' },
   ]
 
-export default function Header({ isSteps, setIsSteps }) {
+export default function Header() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 

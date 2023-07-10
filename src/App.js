@@ -14,10 +14,6 @@ function App() {
         <Route path="/" element={ <LandingPage/> } />
         <Route path="/about" element={ <AboutPage/> } />
         <Route path="/faq" element={ <FaqPage/> } />
-        <Route path="/formpage" element={ <Formpage/> } />
-        <Route path="/formpage2" element={ <Formpage2/> } />
-        <Route path="/PostalCodePage" element={ <PostalCodePage/> } />
-        <Route path="/CourtRecommendation" element={ <CourtRecommendation/> } />
       </Routes>
     </div>
   )
