@@ -1,54 +1,56 @@
-import { Fragment, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
-import { Button, Progress } from 'flowbite-react';
+import { Button } from 'flowbite-react';
+import { HiOutlineArrowLeft } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
-import { Dialog } from '@headlessui/react';
-import { HiOutlineArrowLeft, HiOutlineArrowRight, HiShoppingCart } from 'react-icons/hi';
 
-export default function FormPageContent2() {
+export default function FormPageContent2({ isSteps, setIsSteps, request }) {
 
-    function handleBackClick() {
-        navigate('/formpage')
+    function assignSpecific (field) {
+        request[1]=field
+        console.log(request[1])
+        setIsSteps(3)
     }
 
-    const navigate = useNavigate();
-    const [warningOpen, setWarningOpen] = useState(false);
 
-    function handleClick() {
-        setWarningOpen(true);
-        navigate('/PostalCodePage');
-    }
     return (
         <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
+                <Transition
+                    show={true}
+                    enter="transition-opacity duration-150"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-150"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
                 <h1 className="font-akkurat text-legalnavverydarkpurple text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    Is your claim worth more than 5,000€
-                    <div className='case-selection'>
-                        <Progress progress={20} />
+                    Which specific topic?
+                </h1>
+                <div className='case-selection'>
                         <Button
-                            onClick={() => handleClick()}
+                            onClick={() => { assignSpecific("Kaution") }}
                             type="button"
-                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
-                            YES
+                            Deposit
                         </Button>
                         <Button
+                            onClick={() => { assignSpecific("Mieterhöhung") }}
                             type="button"
-                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
-                            NO
+                            Rent Increase
                         </Button>
                     </div>
                     <div className='back-button'>
-                    <Button onClick={handleBackClick}>
-                        <HiOutlineArrowLeft className="ml-2 h-5 w-5" />
+                    <Button onClick={() => {setIsSteps(1)}} className='hover:-translate hover:scale-110 duration-300'>
+                        <HiOutlineArrowLeft className="ml-0 h-4 w-4" />
                         <p>
-                            Back
+                        &nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;
                         </p>                        
                     </Button>
                     </div>
-                </h1>
+                </Transition>
             </div>
         </div>
     )

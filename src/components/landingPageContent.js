@@ -2,7 +2,7 @@ import Typewriter from 'typewriter-effect';
 import { Button } from 'flowbite-react';
 
 export default function LandingPageContent({ isSteps, setIsSteps }) {
-    
+
     return (
         <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
@@ -22,7 +22,7 @@ export default function LandingPageContent({ isSteps, setIsSteps }) {
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button
-                    onClick={() => setIsSteps(isSteps => 1)}
+                    onClick={() => {setIsSteps(isSteps+1)}}
                     type="button"
                     className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none font-medium border-none rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl"
                 >

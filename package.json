@@ -19,7 +19,8 @@
     "react-scripts": "^5.0.1",
     "tw-elements": "^1.0.0-beta2",
     "typewriter-effect": "^2.20.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zip-to-city": "^0.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

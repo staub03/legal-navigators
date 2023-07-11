@@ -1,19 +1,13 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment} from 'react'
 
-export default function NoSupport({ isNoSupport, setIsNoSupport })  {
-  let [isOpen, setIsOpen] = useState(true)
-
-  function closeModal() {
-    setIsOpen(false)
-    setIsNoSupport(isNoSupport = false)
-  }
+export default function NoSupport({ isSteps, setIsSteps })  {
 
   return (
     <div className="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
-            <Transition appear show={isOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={closeModal}>
+            <Transition appear show={true} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => {setIsSteps(1)}}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -52,7 +46,7 @@ export default function NoSupport({ isNoSupport, setIsNoSupport })  {
                                 <button
                                     type="button"
                                     className="inline-flex justify-center rounded-md border border-transparent bg-legalnavverylightpurple px-4 py-2 text-sm font-medium text-legalnavverydarkpurple focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                                    onClick={closeModal}
+                                    onClick={() => {setIsSteps(1)}}
                                 >
                                     Got it, thanks!
                                 </button>
