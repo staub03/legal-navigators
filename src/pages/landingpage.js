@@ -9,8 +9,9 @@ import NoSupport from '../components/noSupport';
 import Delayed from '../components/Delayed';
 import React from 'react';
 import FormPageContent2 from '../components/formPageContent2';
+import PostalCode from '../components/formPageContent3';
 
-export default await function LandingPage() {
+export default function LandingPage() {
   const [isSteps, setIsSteps] = useState(0)
   const request = [];
 
@@ -69,6 +70,19 @@ return (
                 >
       <Delayed waitBeforeShow={200}>
       <FormPageContent2 isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
+      </Delayed>
+    </Transition>
+    <Transition    
+                    show={isSteps===3}
+                    enter="transition-opacity duration-150"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-150"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+      <Delayed waitBeforeShow={200}>
+      <PostalCode isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
       </Delayed>
     </Transition>
     <Footer/>

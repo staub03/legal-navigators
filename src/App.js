@@ -2,10 +2,6 @@ import { Routes, Route } from "react-router-dom"
 import LandingPage from "./pages/landingpage"
 import AboutPage from "./pages/aboutus"
 import FaqPage from "./pages/faq"
-import Formpage from "./pages/formpage"
-import Formpage2 from "./pages/formpage2"
-import PostalCodePage from "./pages/postalCodePage"
-import CourtRecommendation from "./pages/courtRecommendation"
 
 function App() {
   return (
