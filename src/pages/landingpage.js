@@ -10,6 +10,7 @@ import Delayed from '../components/Delayed';
 import React from 'react';
 import FormPageContent2 from '../components/formPageContent2';
 import PostalCode from '../components/formPageContent3';
+import Loading from '../components/loadingAnimation';
 
 export default function LandingPage() {
   const [isSteps, setIsSteps] = useState(0)
@@ -17,7 +18,6 @@ export default function LandingPage() {
 
 return (
   <div class="flex flex-col h-screen">
-
     <Header/>
     <Background/>
     <Transition
@@ -84,6 +84,17 @@ return (
       <Delayed waitBeforeShow={200}>
       <PostalCode isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
       </Delayed>
+    </Transition>
+    <Transition    
+                    show={isSteps===4}
+                    enter="transition-opacity duration-150"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-150"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+      <Loading/>
     </Transition>
     <Footer/>
   </div>
