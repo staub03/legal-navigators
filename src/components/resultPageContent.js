@@ -38,7 +38,7 @@ export default function ResultPageContent ( { setIsSteps, request, court, adress
                     </Button>
                 </div>
                 <div>
-                    <Button className="font-akkurat text-legalnavverydarkpurple outline-none border-none text-decoration-line: underline">
+                    <Button href="nextsteps" className="font-akkurat text-legalnavverydarkpurple outline-none border-none text-decoration-line: underline">
                         What's next?
                     </Button>
                 </div>

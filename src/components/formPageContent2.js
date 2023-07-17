@@ -28,18 +28,39 @@ export default function FormPageContent2({ isSteps, setIsSteps, request, setRequ
                 </h1>
                 <div className='case-selection'>
                         <Button
-                            onClick={() => { assignSpecific("Kaution") }}
+                            onClick={() => { assignSpecific("Mietminderung") }}
                             type="button"
                             className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
-                            Deposit
+                            Rent Reduction
                         </Button>
                         <Button
-                            onClick={() => { assignSpecific("Mieterhöhung") }}
+                            onClick={() => { assignSpecific("Vertragsabschluss") }}
                             type="button"
                             className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
-                            Rent Increase
+                            Contract Conclusion
+                        </Button>
+                        <Button
+                            onClick={() => { assignSpecific("Nebenkostenabrechnung") }}
+                            type="button"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
+                        >
+                            Service Charges
+                        </Button>
+                        <Button
+                            onClick={() => { assignSpecific("Kündigung des Mietverhältnisses") }}
+                            type="button"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
+                        >
+                            Contract Cancellation
+                        </Button>
+                        <Button
+                            onClick={() => { assignSpecific("Schönheitsreparaturen") }}
+                            type="button"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
+                        >
+                            Cosmetic Repairs
                         </Button>
                     </div>
                     <div className='back-button'>

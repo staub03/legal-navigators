@@ -10,26 +10,28 @@ export default function PostalCode( { isSteps, setIsSteps, request, court, setCo
 
 async function handleCall (ms) {
   return new Promise ((resolve) => {
-    const prompt = "Du bist ein Chatbot. Was ist das richtige Gericht für "+`${request[0]}`+", spezifisch das Thema "+`${request[1]}`+" in Deutschland spezfisich im Ort mit der Postleitzahl "+`${request[2]}`+"? Antworte nur mit dem Namen des Gerichts, der Adresse des Gerichts und der Website. Übermittle die Daten im JSON Format.";
+    //const prompt = "Was ist das richtige Gericht für "+`${request[0]}`+", spezifisch das Thema "+`${request[1]}`+" in Deutschland spezfisich im Ort mit der Postleitzahl "+`${request[2]}`+"? Antworte nur mit dem Namen des Gerichts, der Adresse des Gerichts und der Website. Übermittle die Daten im JSON Format.";
     console.log(prompt)
-
+    const systemMessage = { "role": "system", "content": "Du bist ein API-Endpunkt zum identifizieren des richtigen Gerichts in Deutschland für einen bestimmten Rechtsfall. Übermittle den Namen des Gericht, die Adresse des Gerichts und die Website des Gerichts im JSON Format. Nutze folgendes Format: Name: XXX, Adresse: XXX, Website: XXX" }
+    console.log(systemMessage)
+    const message = { "role": "assistant", "content": "Was ist das richtige Gericht für "+`${request[0]}`+", spezifisch das Thema "+`${request[1]}`+" in Deutschland spezifisch im Ort mit der Postleitzahl "+`${request[2]}`+"?" }
+    console.log(message)
     const requestOptions = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY
+      'Authorization': 'Bearer ' + process.env.REACT_APP_API_KEY,
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      'prompt': prompt,
-      'temperature': 0,
-      'max_tokens': 3000,
-      'top_p': 1,
-      'frequency_penalty': 0,
-      'presence_penalty': 0.5,
-      'stop': ["\"\"\""],
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        systemMessage,
+        message
+      ],
+      "temperature": 0
     })
   };
-  fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', requestOptions)
+  fetch('https://api.openai.com/v1/chat/completions', requestOptions)
     .then(response => response.json())
     .then(data => {
       dataOutput = data;
@@ -44,9 +46,9 @@ async function handleCall (ms) {
 
   async function saveData (ms) {
     return new Promise ((resolve) => {
-      const json = JSON.parse(JSON.stringify(JSON.parse(dataOutput.choices[0].text)))
+      const json = JSON.parse(JSON.stringify(JSON.parse(dataOutput.choices[0].message.content)))
       console.log(json)
-      setCourt(court => json["Gericht"]);
+      setCourt(court => json["Name"]);
       setAdress(adress => json["Adresse"]);
       setWebsite(website => json["Website"]);
       setTimeout(resolve, ms);

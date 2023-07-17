@@ -14,7 +14,7 @@ module.exports = {
     },
 
     fontFamily: {
-      'akkurat': ['Akkurat Pro']
+      'akkurat': ['Akkurat Pro', 'Helvetica']
   },
     extend: {
   plugins: [],

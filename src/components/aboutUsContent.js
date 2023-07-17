@@ -1,3 +1,4 @@
+import Avatar from "react-avatar";
 
 const people = [
     {
@@ -45,7 +46,7 @@ export default function AboutUs() {
   {people.map((person) => (
     <li key={person.name}>
       <div className="flex items-center gap-x-6">
-        <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+      <Avatar name={person.name} size="60" round={true} color="#777dba"/>
         <div>
           <h3 className="text-base text-legalnavverydarkpurple font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
           <p className="text-sm text-legalnavpurple font-semibold leading-6 text-indigo-600">{person.role}</p>
