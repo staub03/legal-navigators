@@ -3,11 +3,10 @@ import { HiOutlineArrowLeft } from 'react-icons/hi';
 import { HomeModernIcon } from '@heroicons/react/24/solid'
 import { Transition } from '@headlessui/react';
 
-export default function FormPageContent({ isSteps, setIsSteps, request }) {
+export default function FormPageContent({ isSteps, setIsSteps, request, setRequest }) {
 
     function assignLawField (field) {
-        request[0]=field
-        console.log(request[0])
+        setRequest(request => [...request, field]);
         setIsSteps(2)
     }
 

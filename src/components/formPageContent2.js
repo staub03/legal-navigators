@@ -2,11 +2,11 @@ import { Button } from 'flowbite-react';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
 import { Transition } from '@headlessui/react';
 
-export default function FormPageContent2({ isSteps, setIsSteps, request }) {
+export default function FormPageContent2({ isSteps, setIsSteps, request, setRequest }) {
 
     function assignSpecific (field) {
-        request[1]=field
-        console.log(request[1])
+        setRequest(request => [...request, field]);
+        console.log(isSteps)
         setIsSteps(3)
     }
 

@@ -11,10 +11,14 @@ import React from 'react';
 import FormPageContent2 from '../components/formPageContent2';
 import PostalCode from '../components/formPageContent3';
 import Loading from '../components/loadingAnimation';
+import ResultPageContent from '../components/resultPageContent';
 
 export default function LandingPage() {
   const [isSteps, setIsSteps] = useState(0)
-  const request = [];
+  const [request, setRequest] = useState([]);
+  const [court, setCourt] = useState([]);
+  const [adress, setAdress] = useState([]);
+  const [website, setWebsite] = useState([]);
 
 return (
   <div class="flex flex-col h-screen">
@@ -43,7 +47,7 @@ return (
                     leaveTo="opacity-0"
                 >
       <Delayed waitBeforeShow={200}>
-      <FormPageContent isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
+      <FormPageContent isSteps={isSteps} setIsSteps={setIsSteps} request={request} setRequest={setRequest}/>
       </Delayed>
     </Transition>
     <Transition
@@ -69,7 +73,7 @@ return (
                     leaveTo="opacity-0"
                 >
       <Delayed waitBeforeShow={200}>
-      <FormPageContent2 isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
+      <FormPageContent2 isSteps={isSteps} setIsSteps={setIsSteps} request={request} setRequest={setRequest} setCourt={setCourt} setAdress={setAdress} setWebsite={setWebsite}/>
       </Delayed>
     </Transition>
     <Transition    
@@ -95,6 +99,19 @@ return (
                     leaveTo="opacity-0"
                 >
       <Loading/>
+    </Transition>
+    <Transition    
+                    show={isSteps===5}
+                    enter="transition-opacity duration-150"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-150"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+      <Delayed waitBeforeShow={200}>
+      <ResultPageContent setIsSteps={setIsSteps} court={court} adress={adress} website={website}/>
+      </Delayed>
     </Transition>
     <Footer/>
   </div>
