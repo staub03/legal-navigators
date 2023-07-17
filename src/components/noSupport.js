@@ -30,7 +30,7 @@ export default function NoSupport({ isSteps, setIsSteps })  {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-legalnavverylightpurple p-6 text-left align-middle shadow-xl transition-all">
+                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-legalnavverylightpurple bg-opacity-40 p-6 text-left align-middle shadow-xl transition-all">
                                 <Dialog.Title
                                     as="h3"
                                     className="text-lg font-medium leading-6 text-legalnavverydarkpurple"
@@ -45,7 +45,7 @@ export default function NoSupport({ isSteps, setIsSteps })  {
                             <div className="mt-4">
                                 <button
                                     type="button"
-                                    className="inline-flex justify-center rounded-md border border-transparent bg-legalnavverylightpurple px-4 py-2 text-sm font-medium text-legalnavverydarkpurple focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                                    className="inline-flex justify-center rounded-md border border-transparent bg-opacity-40 bg-legalnavverylightpurple px-4 py-2 text-sm font-medium text-legalnavverydarkpurple focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                                     onClick={() => {setIsSteps(1)}}
                                 >
                                     Got it, thanks!
