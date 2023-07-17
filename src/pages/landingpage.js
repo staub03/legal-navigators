@@ -16,9 +16,9 @@ import ResultPageContent from '../components/resultPageContent';
 export default function LandingPage() {
   const [isSteps, setIsSteps] = useState(0)
   const [request, setRequest] = useState([]);
-  const [court, setCourt] = useState([]);
-  const [adress, setAdress] = useState([]);
-  const [website, setWebsite] = useState([]);
+  const [court, setCourt] = useState("");
+  const [adress, setAdress] = useState("");
+  const [website, setWebsite] = useState("");
 
 return (
   <div class="flex flex-col h-screen">
@@ -73,7 +73,7 @@ return (
                     leaveTo="opacity-0"
                 >
       <Delayed waitBeforeShow={200}>
-      <FormPageContent2 isSteps={isSteps} setIsSteps={setIsSteps} request={request} setRequest={setRequest} setCourt={setCourt} setAdress={setAdress} setWebsite={setWebsite}/>
+      <FormPageContent2 isSteps={isSteps} setIsSteps={setIsSteps} request={request} setRequest={setRequest} court={court} setCourt={setCourt} setAdress={setAdress} setWebsite={setWebsite}/>
       </Delayed>
     </Transition>
     <Transition    
@@ -86,7 +86,7 @@ return (
                     leaveTo="opacity-0"
                 >
       <Delayed waitBeforeShow={200}>
-      <PostalCode isSteps={isSteps} setIsSteps={setIsSteps} request={request} />
+      <PostalCode isSteps={isSteps} setIsSteps={setIsSteps} request={request} court={court} setCourt={setCourt} adress={adress} setAdress={setAdress} website={website} setWebsite={setWebsite}/>
       </Delayed>
     </Transition>
     <Transition    

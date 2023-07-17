@@ -1,21 +1,15 @@
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
-import { useState, useRef, useEffect } from 'react';
+import { Button, TextInput } from 'flowbite-react';
+import { useRef } from 'react';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
-const { Configuration, OpenAIApi } = require("openai");
 
 
-export default function PostalCode( { isSteps, setIsSteps, request, setCourt, setAdress, setWebsite} ) {
+export default function PostalCode( { isSteps, setIsSteps, request, court, setCourt, adress, setAdress, website, setWebsite} ) {
 
   const postalCode = useRef(null);
+  var dataOutput;
 
-  async function wait(ms) {
-    return new Promise((resolve) => {
-      console.log(ms);
-      setTimeout(resolve, ms);
-    });
-  }
-
-async function handleCall () {
+async function handleCall (ms) {
+  return new Promise ((resolve) => {
     const prompt = "Du bist ein Chatbot. Was ist das richtige Gericht für "+`${request[0]}`+", spezifisch das Thema "+`${request[1]}`+" in Deutschland spezfisich im Ort mit der Postleitzahl "+`${request[2]}`+"? Antworte nur mit dem Namen des Gerichts, der Adresse des Gerichts und der Website. Übermittle die Daten im JSON Format.";
     console.log(prompt)
 
@@ -38,22 +32,35 @@ async function handleCall () {
   fetch('https://api.openai.com/v1/engines/text-davinci-003/completions', requestOptions)
     .then(response => response.json())
     .then(data => {
-    console.log(data)
+      dataOutput = data;
+      console.log(dataOutput);
+      setTimeout(resolve, ms);
     }).catch(err => {
       console.log("Error! Try again.");
+      setTimeout(resolve, ms);
     });
+  });
+  }
+
+  async function saveData (ms) {
+    return new Promise ((resolve) => {
+      const json = JSON.parse(JSON.stringify(JSON.parse(dataOutput.choices[0].text)))
+      console.log(json)
+      setCourt(court => json["Gericht"]);
+      setAdress(adress => json["Adresse"]);
+      setWebsite(website => json["Website"]);
+      setTimeout(resolve, ms);
+    })
   }
     
 
 async function SubmitPostal (e) {
     e.preventDefault();
     request[2]=postalCode.current.value
-    console.log(isSteps)
-    await (handleCall());
     setIsSteps(isSteps=4)
-    await wait(7000);
+    await (handleCall(1000));
+    await (saveData(1000));
     setIsSteps(isSteps=5)
-    console.log(isSteps)
 }
 
   return (

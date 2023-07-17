@@ -1,6 +1,6 @@
 import { Button } from 'flowbite-react';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
-import { HomeModernIcon } from '@heroicons/react/24/solid'
+import { HomeModernIcon, CurrencyEuroIcon } from '@heroicons/react/24/solid'
 import { Transition } from '@headlessui/react';
 
 export default function FormPageContent({ isSteps, setIsSteps, request, setRequest }) {
@@ -24,7 +24,7 @@ export default function FormPageContent({ isSteps, setIsSteps, request, setReque
                     leaveTo="opacity-0"
                 >
                 <h1 className="font-akkurat text-legalnavverydarkpurple text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    Which of those Law Cases do you feel fits more to your case?
+                    Which topic is your situation related to?
 
                 </h1>
                 <div className='case-selection'>
@@ -34,7 +34,15 @@ export default function FormPageContent({ isSteps, setIsSteps, request, setReque
                             className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
                         >
                             <HomeModernIcon className="h-6 w-6" aria-hidden="true" />
-                            &nbsp;&nbsp;&nbsp;Tenancy Law
+                            &nbsp;&nbsp;&nbsp;Tenancy
+                        </Button>
+                        <Button
+                            onClick={() => { assignLawField("Mietrecht") }}
+                            type="button"
+                            className="font-akkurat text-[#ffffff] bg-legalnavverydarkpurple hover:-translate hover:scale-110 hover:bg-legalnavdarkpurple duration-300 focus:outline-none border-none font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 shadow-2xl mr-3"
+                        >
+                            <CurrencyEuroIcon className="h-6 w-6" aria-hidden="true" />
+                            &nbsp;&nbsp;&nbsp;Debt Collection
                         </Button>
                         <Button
                             onClick={() => {setIsSteps(99)}}
