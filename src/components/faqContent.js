@@ -14,7 +14,7 @@ export default function Example() {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Do you store any data?</span>
                 <ChevronDownIcon
                   className={`${
@@ -33,7 +33,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What are the risks of sending a lawsuit to a wrong court?</span>
                 <ChevronDownIcon
                   className={`${
@@ -50,7 +50,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Are there different types of courts in Germany, and how do I know which one to approach for my specific case?</span>
                 <ChevronDownIcon
                   className={`${
@@ -67,7 +67,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What factors determine the jurisdiction of a court in Germany?</span>
                 <ChevronDownIcon
                   className={`${
@@ -84,7 +84,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What are the potential consequences of missing the statute of limitations deadline?</span>
                 <ChevronDownIcon
                   className={`${
@@ -101,7 +101,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>Which law field does Legal Navigators support?</span>
                 <ChevronDownIcon
                   className={`${

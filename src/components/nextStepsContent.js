@@ -14,7 +14,7 @@ export default function Example() {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>1. Written form</span>
                 <ChevronDownIcon
                   className={`${
@@ -31,7 +31,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>2. Designation as a lawsuit</span>
                 <ChevronDownIcon
                   className={`${
@@ -47,7 +47,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>3. Parties</span>
                 <ChevronDownIcon
                   className={`${
@@ -63,7 +63,7 @@ export default function Example() {
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>4. Subject matter of the action and amount in dispute</span>
                 <ChevronDownIcon
                   className={`${
@@ -81,7 +81,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>5. Applications</span>
                 <ChevronDownIcon
                   className={`${
@@ -97,7 +97,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>6. Cicumstanes of the case</span>
                 <ChevronDownIcon
                   className={`${
@@ -114,7 +114,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>7. Offers of proof</span>
                 <ChevronDownIcon
                   className={`${
@@ -131,7 +131,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>8. Legal explanations</span>
                 <ChevronDownIcon
                   className={`${
@@ -148,7 +148,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>9. Court costs</span>
                 <ChevronDownIcon
                   className={`${
@@ -165,7 +165,7 @@ Following that, the plaintiff should indicate the disputed amount. This is neces
         <Disclosure as="div" className="mt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-50 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-legalnavverylightpurple bg-opacity-0 px-4 py-2 text-left text-sm font-medium text-legalnavverydarkpurple hover:bg-legalnavverylightpurple focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>10. Signature</span>
                 <ChevronDownIcon
                   className={`${
